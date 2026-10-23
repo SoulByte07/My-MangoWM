@@ -7,7 +7,7 @@
 
 # [Core Wayland Compositor & Bar]
 mango                                # Wayland window manager compositor (or mango-wm-git)
-mangobar                             # Highly customizable status bar for MangoWM
+mangobar                             # Highly customizable status bar (Fork: https://github.com/SoulByte07/mangobar)
 
 # [Launchers & Menus]
 rofi-wayland                         # Application launcher, dmenu provider, calculator & switcher
@@ -69,7 +69,9 @@ bibata-cursor-theme                  # Bibata-Modern-Ice cursor theme
 #       dunst wlsunset hypridle hyprlock wl-clipboard cliphist pamixer playerctl \
 #       brightnessctl grim slurp satty pcmanfm libqalculate fastfetch jq socat \
 #       base-devel ttf-jetbrains-mono-nerd
-#   yay -S --needed mango-wm-git mangobar wallust wl-clip-persist bibata-cursor-theme-bin
+#   yay -S --needed mango-wm-git wallust wl-clip-persist bibata-cursor-theme-bin
+#   # Install SoulByte07's mangobar fork:
+#   git clone https://github.com/SoulByte07/mangobar.git /tmp/mangobar && cd /tmp/mangobar && make && sudo make install
 #
 # Fedora:
 #   sudo dnf install foot rofi-wayland fuzzel wlogout swaybg ImageMagick ffmpeg \

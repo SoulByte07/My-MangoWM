@@ -5,7 +5,7 @@
 **A sleek, ultra-responsive, dynamic-palette Wayland desktop powered by MangoWM & Wallust.**
 
 [![Compositor](https://img.shields.io/badge/Compositor-MangoWM-orange.svg?style=for-the-badge&logo=wayland)](https://github.com/DreamMaoMao/mango)
-[![Status Bar](https://img.shields.io/badge/Bar-MangoBar-f5a97f.svg?style=for-the-badge)](https://github.com/DreamMaoMao/mangobar)
+[![Status Bar](https://img.shields.io/badge/Bar-SoulByte07%2Fmangobar-f5a97f.svg?style=for-the-badge)](https://github.com/SoulByte07/mangobar)
 [![Palette Generator](https://img.shields.io/badge/Theming-Wallust-94e2d5.svg?style=for-the-badge)](https://codeberg.org/explosion-mental/wallust)
 [![Terminal](https://img.shields.io/badge/Terminal-Foot-89b4fa.svg?style=for-the-badge)](https://codeberg.org/dnkl/foot)
 [![Shell](https://img.shields.io/badge/Shell-Bash-4EAA25.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
@@ -13,6 +13,7 @@
 
 <p align="center">
   <a href="#-gallery">Screenshots</a> •
+  <a href="#-benchmarks--efficiency-flex">Benchmarks & Flex</a> •
   <a href="#-features">Features</a> •
   <a href="#-requirements">Requirements</a> •
   <a href="#-installation">Installation</a> •
@@ -42,6 +43,21 @@
 
 ---
 
+## ⚡ Benchmarks & Efficiency (The Flex 💪)
+
+Engineered for extreme responsiveness, thermal efficiency, and maximum battery endurance:
+
+| Metric | Measured Real-World Performance | Details |
+| :--- | :---: | :--- |
+| **Idle RAM Usage** | **`< 600 MB`** | Complete desktop loaded (MangoWM + MangoBar + Dunst + daemons) |
+| **Idle CPU Load** | **`~0%`** | Direct event-driven daemons & C-based system metrics |
+| **Battery Life** | **`~7 Hours`** | Tested on a modest **45Wh** battery under normal workflows |
+
+> [!TIP]
+> All metrics and background scripts are hyper-optimized to eliminate polling loops, leveraging inotify, native Wayland protocols, and direct kernel syscalls.
+
+---
+
 ## ✨ Features
 
 - 🎨 **Dynamic Wallust Palette Theming**: Change wallpapers seamlessly; colors automatically generate and propagate across MangoWM window borders, `mangobar`, `rofi`, and `dunst`.
@@ -59,7 +75,7 @@
 All required dependencies are neatly documented in [`Asserts/requirements.txt`](Asserts/requirements.txt).
 
 ### Core Components
-- **Compositor & Bar**: `mango` (or `mango-wm-git`), `mangobar`
+- **Compositor & Bar**: `mango` (or `mango-wm-git`), [`mangobar` (SoulByte07's fork)](https://github.com/SoulByte07/mangobar)
 - **Launchers & UI**: `rofi-wayland`, `fuzzel`, `wlogout`
 - **Theme & Wallpapers**: `swaybg`, `wallust`, `imagemagick`, `ffmpeg`
 - **Daemons**: `dunst`, `wlsunset`, `hypridle`, `hyprlock`
@@ -85,7 +101,11 @@ sudo pacman -S --needed \
 
 # AUR packages (using yay or paru)
 yay -S --needed \
-    mango-wm-git mangobar wallust wl-clip-persist bibata-cursor-theme-bin
+    mango-wm-git wallust wl-clip-persist bibata-cursor-theme-bin
+
+# Install SoulByte07's mangobar fork
+git clone https://github.com/SoulByte07/mangobar.git /tmp/mangobar
+cd /tmp/mangobar && make && sudo make install
 ```
 
 #### Fedora
@@ -104,7 +124,7 @@ sudo dnf install \
 Clone this configuration directly to your user's `~/.config/mango`:
 
 ```bash
-git clone https://github.com/your-username/My-MangoWM.git ~/.config/mango
+git clone https://github.com/SoulByte07/My-MangoWM.git ~/.config/mango
 ```
 
 > [!NOTE]

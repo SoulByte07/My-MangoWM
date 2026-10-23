@@ -32,8 +32,8 @@ if [[ -f "$SRC" ]]; then
 fi
 
 # 3. Fallback: Pure Bash implementation if C binary cannot be built
-readonly NETWORK_INTERFACE="wlp0s20f3"
-readonly BATTERY_DEVICE="BAT0"
+readonly NETWORK_INTERFACE=""
+readonly BATTERY_DEVICE=""
 readonly SAMPLE_INTERVAL="0.25"
 readonly NOTIFICATION_TIMEOUT_MS="15000"
 

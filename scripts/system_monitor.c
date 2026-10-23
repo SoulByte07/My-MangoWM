@@ -10,8 +10,8 @@
 #include <sys/wait.h>
 #include <math.h>
 
-#define DEFAULT_IFACE "wlp0s20f3"
-#define DEFAULT_BAT "BAT0"
+#define DEFAULT_IFACE ""
+#define DEFAULT_BAT ""
 #define DEFAULT_SAMPLE_MS 250
 #define DEFAULT_TIMEOUT_MS 15000
 #define NOTIFY_REPLACE_ID 4242

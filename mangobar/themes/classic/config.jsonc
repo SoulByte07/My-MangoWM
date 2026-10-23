@@ -1,0 +1,146 @@
+{
+    "layer": "top",
+    "height": 36,
+    "buffer-scale": 1,
+    "modules-left": [
+        "workspaces"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "layout",
+        "custom/hypridle",
+        "clock#time",
+        "custom/menu"
+    ],
+    "workspaces": {
+        "hide-empty": true,
+        "overview-label": "OVERVIEW",
+        "on-click": "activate",
+        "on-click-right": "toggle",
+        "scroll-interval": 100,
+        "on-scroll-up": "mmsg dispatch viewtoleft_have_client",
+        "on-scroll-down": "mmsg dispatch viewtoright_have_client",
+        "tag-names": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "format-icons": {
+            "active": "󰮯",
+            "empty": "",
+            "occupied": "󰊠",
+            "default": "󰊠"
+        },
+        "pinned": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    },
+    "layout": {
+        "format": "{}",
+        "format-icons": {
+            "tile": "󰕰",
+            "T": "󰕰",
+            "master": "󰕰",
+            "scroller": "󱕒",
+            "S": "󱕒"
+        }
+    },
+    "window": {
+        "format": "{}"
+    },
+    "hideclients": {
+        "format": " {}"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+    "network": {
+        "format": "{icon} {ifname}",
+        "format-wifi": "{icon} {signal}%",
+        "format-disconnected": "󰖪 Disconnected",
+        "icon-wifi": "󰖩",
+        "icon-ethernet": "󰈀",
+        "icon-disconnected": "󰖪"
+    },
+    "cpu": {
+        "format": " {load}%"
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 Muted",
+        "icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 2",
+        "on-scroll-down": "pamixer -d 2"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    "battery": {
+        "format": "{icon} {percent}%",
+        "icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "icon-ac": "",
+        "hide-on-ac": false
+    },
+    "clock#date": {
+        "format": " {:L%a %b %d}"
+    },
+    "clock#time": {
+        "format": "  {:L%H:%M}"
+    },
+    "custom/menu": {
+        "format": "  "
+    },
+    "custom/hypridle": {
+        "format": "{}",
+        "exec": "bash ~/.config/mango/scripts/HypridleIndicator.sh status",
+        "interval": 5,
+        "signal": 9,
+        "on-click": "bash ~/.config/mango/scripts/HypridleIndicator.sh toggle",
+        "on-click-right": "bash ~/.config/mango/scripts/LockScreen.sh"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "bash ~/.config/mango/scripts/Wlogout.sh"
+    },
+    "keymode": {
+        "format": "Mode: {}"
+    }
+}

@@ -1,0 +1,16 @@
+/* Wallust Theme Colors for Mangobar */
+@define-color color-bg                 #161618;
+@define-color color-fg                 #D4D9E5;
+@define-color color-module-bg          rgba(26, 27, 40, 0.85);
+@define-color color-module-border      rgba(84, 87, 107, 0.5);
+@define-color color-active-bg          #54576B;
+@define-color color-active-fg          #FFFFFF;
+@define-color color-hover-bg           rgba(91, 94, 115, 0.7);
+@define-color color-urgent-bg          #AD401F;
+@define-color color-urgent-fg          #FFFFFF;
+@define-color color-cpu-bg             rgba(46, 42, 40, 0.85);
+@define-color color-mem-bg             rgba(37, 44, 45, 0.85);
+@define-color color-audio-bg           rgba(38, 43, 40, 0.85);
+@define-color color-battery-bg         rgba(40, 42, 34, 0.85);
+@define-color color-power-bg           rgba(50, 30, 35, 0.85);
+@define-color color-clock-bg           rgba(26, 27, 40, 0.85);

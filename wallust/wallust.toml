@@ -1,0 +1,33 @@
+# ==================================================
+#  MangoWM - Wallust Configuration
+# ==================================================
+
+backend = "kmeans"
+color_space = "labmixed"
+palette = "dark16"
+threshold = 11
+
+[templates]
+# Rofi colors in MangoWM
+rofi.template = 'colors-rofi.rasi'
+rofi.target = '~/.config/mango/rofi/wallust/colors-rofi.rasi'
+
+# Mangobar colors
+mangobar.template = 'colors-waybar.css'
+mangobar.target = '~/.config/mango/wallust/colors-waybar.css'
+
+# Global Rofi fallback sync
+global_rofi.template = 'colors-rofi.rasi'
+global_rofi.target = '~/.config/rofi/wallust/colors-rofi.rasi'
+
+# Dunst notifications (if template exists)
+dunst.template = 'dunstrc.conf'
+dunst.target = '~/.config/dunst/dunstrc.d/dunstrc.conf'
+
+# MangoWM Window Frame & Compositor colors
+mango.template = 'colors-mango.conf'
+mango.target = '~/.config/mango/config/colors.conf'
+
+# Hyprlock colors in MangoWM
+hyprlock.template = 'colors-hyprland.conf'
+hyprlock.target = '~/.config/mango/wallust/wallust-hyprland.conf'

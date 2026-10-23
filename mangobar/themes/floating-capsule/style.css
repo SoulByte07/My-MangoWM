@@ -1,0 +1,138 @@
+/* ----------- 💫 Centered Floating Capsule Theme (Mangobar) 💫 -------- */
+@import "~/.config/mango/wallust/colors-waybar.css";
+
+/* Base font & default module container styling (Exact match to classic) */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 15px;
+    font-weight: bold;
+    color: @foreground;
+    background-color: transparent;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    border-radius: 25px;
+}
+
+/* Outer Centered Floating Capsule Island */
+#bar {
+    background-color: @background;
+    border-color: @color13;
+    border-width: 1.0px 3.0px;
+    border-radius: 25px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 12px;
+    box-shadow: none;
+}
+#bar.sel {
+    background-color: @background;
+    border-color: @color13;
+    border-width: 1.0px 3.0px;
+    border-radius: 25px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    box-shadow: none;
+}
+
+/* ==================== Left Zone: Workspaces Bubble ( workspace ) ==================== */
+#tags {
+    background-color: @background;
+    border-color: @color13;
+    border-width: 1.0px 3.0px;
+    border-radius: 25px;
+    padding: 2px 2px;
+    margin: 0px 0px 0px 2px;
+}
+
+/* Tag buttons inside the capsule (Pacman, Ghost, Food) */
+#tags.active {
+    background-color: transparent;
+    color: @color12; /* Vibrant Mauve / Magenta-Violet */
+    padding: 0px 8px;
+    margin: 0px 0px;
+    min-width: 0px;
+}
+#tags.occupied {
+    background-color: transparent;
+    color: @color5; /* Soft lighter lavender / mauve */
+    padding: 0px 8px;
+    margin: 0px 0px;
+    min-width: 0px;
+}
+#tags.empty {
+    background-color: transparent;
+    color: @color4; /* Deep light blue / indigo-violet */
+    padding: 0px 8px;
+    margin: 0px 0px;
+    min-width: 0px;
+}
+#tags.urgent {
+    background-color: #fb4934;
+    color: #11111b;
+    border-radius: 12px;
+    padding: 8px 8px;
+    margin: 0px 0px;
+    min-width: 0px;
+}
+#tags:hover {
+    color: @color12;
+}
+
+/* Clock & Title */
+#clock {
+    color: @color7; /* Vibrant Mauve / Magenta-Violet */
+}
+#title {
+    color: @foreground;
+    padding: 0px 14px;
+    margin: 0px 14px;
+}
+
+/* ==================== Right Zone: Modules Bubble ( layout hypridle menu ) ==================== */
+#modules-right {
+    background-color: @background;
+    border-color: @color13;
+    border-width: 1.0px 3.5px;
+    border-radius: 25px;
+    padding: 0px 0px;
+    margin: 0px 2px 0px 4px;
+}
+
+/* Layout */
+#layout {
+    color: @color6; /* Vibrant Mauve / Accent */
+    background-color: transparent;
+    padding: 0px 8px;
+    margin: 0px 6px;
+    min-width: 30px;
+}
+
+/* Custom Modules inside the capsule */
+#custom-hypridle {
+    color: @color6; /* Light soft lavender / mauve */
+    background-color: transparent;
+    padding: 0px 8px;
+    margin: 0px 6px;
+}
+#custom-menu {
+    color: @color6; /* Blue / Indigo-Violet */
+    background-color: transparent;
+    padding: 0px 8px;
+    margin: 0px 6px;
+}
+
+/* Context Menu */
+menu {
+    background-color: @background;
+    border-color: @color13;
+    border-radius: 10px;
+    font-size: 13px;
+}
+menuitem {
+    color: @foreground;
+}
+menuitem:hover {
+    color: @background;
+    background-color: @color12;
+}

@@ -1,0 +1,150 @@
+/* ----------- 💫 Chroma Simple (Mangobar Native) 💫 -------- */
+@import "~/.config/mango/wallust/colors-waybar.css";
+
+/* Base font & default module container styling */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 15px;
+    font-weight: bold;
+    color: @foreground;
+    background-color: @background;
+    padding: 0px 14px;
+    margin: 0px 3px;
+    border-radius: 20px;
+}
+
+/* Floating transparent bar */
+#bar {
+    background: none;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    margin-left: 4px;
+    margin-right: 10px;
+}
+#bar.sel {
+    background: none;
+}
+
+/* ==================== Tags / Workspaces (Single Big Bubble) ==================== */
+/* Outer capsule wrapping all tags */
+#tags {
+    background-color: @background;
+    border-color: @color12;
+    border-radius: 20px;
+    padding: 0px 8px;
+    margin: 0px 4px;
+}
+
+/* Tag buttons inside the bubble */
+#tags.active {
+    background-color: transparent;
+    color: #ebd044;
+    padding: 0px 8px;
+    margin: 0px 2px;
+    min-width: 24px;
+}
+#tags.occupied {
+    background-color: transparent;
+    color: #ff5555;
+    padding: 0px 8px;
+    margin: 0px 2px;
+    min-width: 24px;
+}
+#tags.empty {
+    background-color: transparent;
+    color: @color10;
+    padding: 0px 8px;
+    margin: 0px 1px;
+    min-width: 20px;
+}
+#tags.urgent {
+    background-color: #fb4934;
+    color: #11111b;
+    border-radius: 12px;
+    padding: 0px 8px;
+    margin: 0px 2px;
+}
+#tags:hover {
+    color: @color12;
+}
+
+/* Layout */
+#layout {
+    color: @color12;
+    min-width: 34px;
+}
+
+/* Window Title */
+#title {
+    color: @foreground;
+    padding: 0px 14px;
+    margin: 0px 4px;
+}
+
+/* Clock & Date */
+#clock {
+    color: @foreground;
+}
+#clock.date {
+    color: @color14;
+}
+
+/* System Monitors */
+#cpu {
+    color: @foreground;
+}
+#mem {
+    color: @foreground;
+}
+#volume {
+    color: @color15;
+}
+#volume.muted {
+    color: @color13;
+}
+#brightness {
+    color: @color14;
+}
+#network {
+    color: @foreground;
+}
+#network.disconnected {
+    color: #fb4934;
+}
+#battery {
+    color: @color10;
+}
+#battery.warning, #battery.critical {
+    color: #fb4934;
+}
+#tray {
+    padding: 0px 12px;
+}
+
+/* Custom Modules */
+#custom-hypridle {
+    color: @color12;
+    padding: 0px 10px;
+    margin: 0px 3px;
+}
+#custom-menu {
+    color: @color12;
+}
+#custom-power {
+    color: #fb4934;
+}
+
+/* Context Menu */
+menu {
+    background-color: @background;
+    border-color: @color13;
+    border-radius: 10px;
+    font-size: 13px;
+}
+menuitem {
+    color: @foreground;
+}
+menuitem:hover {
+    color: @background;
+    background-color: @color12;
+}

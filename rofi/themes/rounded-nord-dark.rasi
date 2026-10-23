@@ -1,0 +1,133 @@
+/* ROUNDED THEME FOR ROFI - WALLUST ADAPTED */
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+
+/*****----- Configuration -----*****/
+configuration {
+    modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               "";
+    drun-display-format:        "{name}";
+}
+
+/*****----- Wallust Color Palette -----*****/
+@theme "~/.config/mango/rofi/wallust/colors-rofi.rasi"
+
+* {
+    /* Mapping Wallust template colors to rounded palette variables */
+    bg0:    @background;
+    bg1:    @normal-background;
+    bg2:    @color0;
+    bg3:    @selected-normal-background;
+    fg0:    @foreground;
+    fg1:    @selected-normal-foreground;
+    fg2:    @color7;
+    fg3:    @color8;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    location:       center;
+    anchor:         center;
+    width:          600px;
+    border-radius:  24px;
+    border:         2px solid;
+    border-color:   @bg3;
+
+    background-color:   @bg0;
+}
+
+mainbox {
+    padding:    16px;
+    spacing:    12px;
+    children:   [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    background-color:   @bg1;
+    border-color:       @bg3;
+
+    border:         2px solid;
+    border-radius:  16px;
+
+    padding:    8px 16px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
+}
+
+prompt {
+    text-color:     @fg2;
+    vertical-align: 0.5;
+}
+
+entry {
+    text-color:         @fg0;
+    placeholder:        " 󰘳";
+    placeholder-color:  @fg3;
+    vertical-align:     0.5;
+}
+
+message {
+    margin:             12px 0 0;
+    border-radius:      16px;
+    border-color:       @bg2;
+    background-color:   @bg2;
+}
+
+textbox {
+    padding:    8px 24px;
+    text-color: @fg0;
+}
+
+listview {
+    background-color:   transparent;
+
+    margin:     12px 0 0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height: false;
+    spacing:    4px;
+}
+
+element {
+    padding:        8px 16px;
+    spacing:        8px;
+    border-radius:  16px;
+    background-color: transparent;
+    text-color:     @fg0;
+    cursor:         pointer;
+}
+
+element normal active {
+    text-color: @bg3;
+}
+
+element alternate active {
+    text-color: @bg3;
+}
+
+element alternate normal {
+    background-color: transparent;
+    text-color:       @fg0;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg3;
+    text-color:         @bg1;
+}
+
+element-icon {
+    size:           1.2em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color:     inherit;
+    vertical-align: 0.5;
+}

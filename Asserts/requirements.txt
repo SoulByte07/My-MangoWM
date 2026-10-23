@@ -1,0 +1,79 @@
+# ==============================================================================
+# MangoWM Environment - System & Package Requirements
+# ==============================================================================
+# This file specifies all runtime binaries, utilities, daemons, and fonts
+# required to run this MangoWM configuration and its associated script ecosystem.
+# ==============================================================================
+
+# [Core Wayland Compositor & Bar]
+mango                                # Wayland window manager compositor (or mango-wm-git)
+mangobar                             # Highly customizable status bar for MangoWM
+
+# [Launchers & Menus]
+rofi-wayland                         # Application launcher, dmenu provider, calculator & switcher
+fuzzel                               # Fast Wayland native application launcher fallback
+wlogout                              # Wayland logout and power menu
+
+# [Wallpaper & Dynamic Theming]
+swaybg                               # Wayland wallpaper display daemon
+wallust                              # Fast pywal alternative to generate colorschemes from image
+imagemagick                          # Image processing tool (magick / convert) for thumbnails & blur
+ffmpeg                               # Video & image thumbnail generator used in wallpaper previews
+
+# [Desktop Daemons & Idle/Lock Management]
+dunst                                # Lightweight notification daemon
+wlsunset                             # Day/night gamma adjust tool (blue light filter)
+hypridle                             # Wayland idle management daemon
+hyprlock                             # Fast and secure Wayland screen lock (or swaylock fallback)
+swaylock                             # Optional screen lock fallback
+
+# [Clipboard Persistence & History]
+wl-clipboard                         # Wayland clipboard utilities (wl-copy, wl-paste)
+wl-clip-persist                      # Keeps clipboard content alive after closing source application
+cliphist                             # Wayland clipboard history manager
+
+# [Audio, Media & Backlight Controls]
+pamixer                              # Pulseaudio / Pipewire CLI volume control
+playerctl                            # Media player CLI controller (MPRIS)
+brightnessctl                        # Display backlight and keyboard LED brightness control
+
+# [Screenshots & Screen Utilities]
+grim                                 # Wayland screen grabber
+slurp                                # Wayland interactive region selection tool
+satty                                # Modern screenshot annotation tool
+
+# [Terminal, File Management & System Tools]
+foot                                 # Fast, lightweight Wayland terminal emulator (primary default)
+pcmanfm                              # Lightweight graphical file manager
+libqalculate                         # Powerful calculator engine (provides `qalc` CLI for RofiCalc)
+fastfetch                            # Fast system information display tool
+jq                                   # Lightweight JSON processor (used in bar & JSON parsing)
+socat                                # Multipurpose relay tool (used for IPC control)
+xdg-user-dirs                        # Tool to manage well-known user directories (Pictures, etc.)
+xdg-utils                            # Desktop integration tools (xdg-open, etc.)
+
+# [Build Tools (for scripts/system_monitor.c)]
+gcc                                  # GNU C Compiler (or clang) to build the fast system_monitor binary
+make                                 # GNU Make utility
+
+# [Typography & Cursors]
+ttf-jetbrains-mono-nerd              # JetBrainsMono Nerd Font (crucial for icons in bar & rofi)
+bibata-cursor-theme                  # Bibata-Modern-Ice cursor theme
+
+# ==============================================================================
+# Package Manager Quick-Install Commands
+# ==============================================================================
+#
+# Arch Linux (pacman & yay/paru):
+#   sudo pacman -S --needed foot rofi-wayland fuzzel wlogout swaybg imagemagick ffmpeg \
+#       dunst wlsunset hypridle hyprlock wl-clipboard cliphist pamixer playerctl \
+#       brightnessctl grim slurp satty pcmanfm libqalculate fastfetch jq socat \
+#       base-devel ttf-jetbrains-mono-nerd
+#   yay -S --needed mango-wm-git mangobar wallust wl-clip-persist bibata-cursor-theme-bin
+#
+# Fedora:
+#   sudo dnf install foot rofi-wayland fuzzel wlogout swaybg ImageMagick ffmpeg \
+#       dunst wlsunset hypridle hyprlock wl-clipboard pamixer playerctl brightnessctl \
+#       grim slurp pcmanfm libqalculate fastfetch jq socat gcc make \
+#       jetbrains-mono-fonts-all
+# ==============================================================================
